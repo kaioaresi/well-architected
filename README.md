@@ -42,6 +42,37 @@ Baseado em cico pilares, excelência operacional, segurança, confiabilidade, ef
 - Comparar a maturidade enre diferentes times, sistemas e produtos.
 - Apresentar ao mercado características de `due-dilligence`.
 
+---
+
+# Execelência operacional
+
+>> Alguns pilares podem ser adequados a cada tipo de realidade nas organizações como (`Reliability`, `Performance efficiency` e `Cost optimization`), porém `Operational Excellence` e `Security` são padrões.
+
+
+## Design principles
+
+- Perform operations as code (Execute a operação como código)
+- Annotate documentation (anotar documentação)
+- Make frequent, small, reversible changes (Alterações frequentes, peguenas e reversíveis)
+- Refine operations procedures frequently (Refine os procedimentos de operação frequentemente)
+- Anticipate failure (Antecipação as falhas)
+- Learn from all operational failures (Aprenda com todas as falhas na operação)
+
+### Melhores praticas
+
+#### 1 - Preparar
+
+- Business (solicitações workload)
+- Checklist (validação)
+- Treinamento (capacitação)
+- Experimentação (testar)
+
+#### 2 - Operar
+
+- Saúde da operação (monitoramento, metricas operacionais, Runbook "descrição do ambiente" e playbook "respostas automatizadas tratadas no playbook")
+- Insigts técnicos e de negócios (Metricas voltadas ao negócio)
+- Resposta a eventos (Automatização de resposta a eventos)
+
 
 
 
