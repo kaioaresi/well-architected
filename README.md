@@ -46,7 +46,7 @@ Baseado em cico pilares, excelência operacional, segurança, confiabilidade, ef
 
 # Execelência operacional
 
->> Alguns pilares podem ser adequados a cada tipo de realidade nas organizações como (`Reliability`, `Performance efficiency` e `Cost optimization`), porém `Operational Excellence` e `Security` são padrões.
+>> Alguns pilares podem ser adequados a cada tipo de realidade nas organizações como (`Reliability`, `Performance efficiency` e `Cost optimization`), porém **`Operational Excellence` e `Security` são pré-requisitos**.
 
 
 ## Design principles
@@ -54,25 +54,44 @@ Baseado em cico pilares, excelência operacional, segurança, confiabilidade, ef
 - Perform operations as code (Execute a operação como código)
 - Annotate documentation (anotar documentação)
 - Make frequent, small, reversible changes (Alterações frequentes, peguenas e reversíveis)
-- Refine operations procedures frequently (Refine os procedimentos de operação frequentemente)
+- Refine operations procedures frequently (Refine os procedimentos de operação frequentemente e melhorias)
 - Anticipate failure (Antecipação as falhas)
 - Learn from all operational failures (Aprenda com todas as falhas na operação)
 
 ### Melhores praticas
 
-#### 1 - Preparar
+#### 1 - Preparar/Planejar
 
 - Business (solicitações workload)
 - Checklist (validação)
-- Treinamento (capacitação)
-- Experimentação (testar)
+- Treinamento (capacitação do time)
+- Experimentação (testar time)
 
 #### 2 - Operar
 
-- Saúde da operação (monitoramento, metricas operacionais, Runbook "descrição do ambiente" e playbook "respostas automatizadas tratadas no playbook")
+- Saúde da operação (monitoramento, metricas operacionais, Runbook "descrição e padronização do ambiente" e playbook "respostas automatizadas tratadas no playbook")
 - Insigts técnicos e de negócios (Metricas voltadas ao negócio)
 - Resposta a eventos (Automatização de resposta a eventos)
 
+#### 3 - Evoluir
+
+- Ciclos de melhorias incrementais
+- Revendo as prioridades definidas
+- Provendo feedback as áreas da empresa
+- Compartilhando lições aprendidas e as oportunidades de melhorias das análises efetuadas
+- `DevOps` para codificação, testes e deploy contínuo de forma automatizada na empresa
+
+### Serviços Chaves AWS
+
+Alguns serviços da aws para lhe auxiliar na execelência operacional
+
+- CloudFormation (IaC)
+- CloudWatch (Monitoramento)
+- VPC Flow logs (Monitoramento do trafego de um VPC)
+- Cloud trail (Autoria de chamadas de API)
+- Config (Automatização e padronização de recursos)
+- Elasticsearch (Analise de tedências)
+- X-Ray (Visibilidade do workload)
 
 
 
