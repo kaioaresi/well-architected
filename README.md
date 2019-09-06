@@ -92,6 +92,56 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Config (Automatização e padronização de recursos)
 - Elasticsearch (Analise de tedências)
 - X-Ray (Visibilidade do workload)
+---
+
+# Segurança
+
+### Design principles
+
+- Implement a strong identify foundation (Implemente uma gestão de identidades bem fundamentada)
+  - Privilegio minimo  
+  - Separation of duties
+  - Centralização da gestão de identidades
+  - ~~Long-term credentials~~ (Utilize roles com permissões temporárias)
+- Enable tracebility (Permitir a rastreabilidade)
+- Apply security at all layers (Apligue segurança em todas as camadas)
+- Automate security best pratices (Automatize as melhores práticas de segurança `IaC`)
+- Protect data in trasit and at rest (Proteja os dados em trânsito e descanso)
+- Keep people away from data (Mantenha as pessoas longe dos dados)
+- Prepare for security events (Prepare-se para eventos de segurança)
+
+
+### Identify and Access management
+
+- Somente o pessoal autorizado e autenticado tenha acesso aos recursos da maneira prevista.
+  - AWS Shared Responsibility Model
+  ![Shared_Responsibility_Model](https://d1.awsstatic.com/security-center/Shared_Responsibility_Model_V2.59d1eccec334b366627e9295b304202faf7b899b.jpg)
+- Estrutura bem definida de gerenciamento de privilégios, como políticas de acesso com granularidade.
+- Política de senhas fortes, Multi-factor authentication (MFA), Federação de diretórios e Credenciais temporárias.
+
+### Detective controls
+
+- Controles detectivos devem ser utilizados para identificar potenciais ameaças de segurança ou incidentes, EX:
+  - Avaliação de inventário de ativos e auditoria interna
+- Implementação de controles que possam identificar e reagir a qualquer atividade anormal. Através do processamento de logs, eventos e monitoramento. Análise automatizadas e alarmes em tempo real.
+- Gerencimaneto de logs é essencial para responder a eventos de segurança, análise forense e compliance com requisitos legais.
+
+### Infrastructure protection
+
+- Proteção da infraestrutura inclui defesa em profundidade (múltilas camadas de defesa).
+- Podem ser implementadas estratégias de segmentação de redes (pública e privada), inspeção de pacotes, isolamento de recursos, topologia de redes (gateway, tabelas de roteamento, etc.)
+- Enforcement de tráfego de entrada e saída, monitoramento dos acessos e alertas.
+- Hardening de sitema operacional e escolha de serviços gerenciados pela aws.
+
+### Data protection
+
+- Classificação de dados para a proteção das informações (controle criptográficos, níveis de acesso, etc.).
+- O cliente mantêm o controle completo sobre os dados, podendo utilizar serviços da AWS para proteger a confidencialidade e integridade dos dados.
+- Logs detalhados de acesso, mecanismos de recuperação e durabilidade dos dados devem ser planejados. Podendo ser adotadas estratégias de replicação e gerenciamento do ciclo de vida dos dados.
+
+### Incident response
+
+- Ainda que controles detectivos e de prevenção estejam implantados é necessário um processo de resposta a incidentes de segurança, mitigando os impactos que possam advir na operação e nos objetivos de negócios.
 
 
 
@@ -100,3 +150,5 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 
 - [Well-Architected](https://aws.amazon.com/pt/architecture/well-architected/)
 - [AWS Artifact](https://aws.amazon.com/artifact/?nc1=h_ls)
+- [AWS Shared Responsibility Model](https://wa.aws.amazon.com/wat.concept.sharedrspmodel.en.html)
+- [Overview Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/?ref=wellarchitected)
