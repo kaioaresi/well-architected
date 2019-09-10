@@ -111,7 +111,7 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Prepare for security events (Prepare-se para eventos de segurança)
 
 
-### Identify and Access management
+#### Identify and Access management
 
 - Somente o pessoal autorizado e autenticado tenha acesso aos recursos da maneira prevista.
   - AWS Shared Responsibility Model
@@ -119,30 +119,45 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Estrutura bem definida de gerenciamento de privilégios, como políticas de acesso com granularidade.
 - Política de senhas fortes, Multi-factor authentication (MFA), Federação de diretórios e Credenciais temporárias.
 
-### Detective controls
+#### Detective controls
 
 - Controles detectivos devem ser utilizados para identificar potenciais ameaças de segurança ou incidentes, EX:
   - Avaliação de inventário de ativos e auditoria interna
 - Implementação de controles que possam identificar e reagir a qualquer atividade anormal. Através do processamento de logs, eventos e monitoramento. Análise automatizadas e alarmes em tempo real.
 - Gerencimaneto de logs é essencial para responder a eventos de segurança, análise forense e compliance com requisitos legais.
 
-### Infrastructure protection
+#### Infrastructure protection
 
 - Proteção da infraestrutura inclui defesa em profundidade (múltilas camadas de defesa).
 - Podem ser implementadas estratégias de segmentação de redes (pública e privada), inspeção de pacotes, isolamento de recursos, topologia de redes (gateway, tabelas de roteamento, etc.)
 - Enforcement de tráfego de entrada e saída, monitoramento dos acessos e alertas.
 - Hardening de sitema operacional e escolha de serviços gerenciados pela aws.
 
-### Data protection
+#### Data protection
 
 - Classificação de dados para a proteção das informações (controle criptográficos, níveis de acesso, etc.).
 - O cliente mantêm o controle completo sobre os dados, podendo utilizar serviços da AWS para proteger a confidencialidade e integridade dos dados.
 - Logs detalhados de acesso, mecanismos de recuperação e durabilidade dos dados devem ser planejados. Podendo ser adotadas estratégias de replicação e gerenciamento do ciclo de vida dos dados.
 
-### Incident response
+#### Incident response
 
 - Ainda que controles detectivos e de prevenção estejam implantados é necessário um processo de resposta a incidentes de segurança, mitigando os impactos que possam advir na operação e nos objetivos de negócios.
+- A arquite do workload afeta diretamente a habilidade em responder a um incidente de segurança, isolando, contendo e restaurando a operação a um estado normal.
+- Ferramentas e automatização devem ser configurados para responder a incidentes, logs poderão ser analizados e utilizados na resposta.
 
+## Serviços chaves
+
+- Identify and Access management (IAM)
+- CloudWatch
+- VPC - (Segmentação de redes (pública e privada), inspeção de pacotes, isolamento de recursos, topologia de redes (gateways, tabelas de roteamentos, etc.))
+  - subnet
+- Cloud Trail
+- Config
+- Organizations
+- KMS
+- WAF
+- Shield
+- CloudFront (CDN)
 
 
 ***
