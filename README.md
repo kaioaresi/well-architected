@@ -159,6 +159,58 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Shield
 - CloudFront (CDN)
 
+---
+
+# Confiabilidade
+
+> O pilar de confiabilidade se concentra na capacidade de evitar e se recuperar rapidamente das falhas para atender a demanda comercial e de clientes.
+
+## Design principles
+
+- Test recovery procedures (Testar procedimentos de recuperação)
+- Automatically recover from failure (Recuperação automática de falhas)
+- Scale horizontally to increase aggregate system availabilit (Escalar horizontalmente para aumentar a disponibilidade do sistema como um todo)
+- **Stop guessing capacity** (Para de desperdiçar capacidade)
+- Manage change in automation (Gerencie mudanças por automação)
+
+## Foundation
+
+- Antes de arquitetar qualquer sistema os recursos de base (fundamentos) que influenciam a confiabilidade do sistema devem estar reservados.
+- A alocação de recursos deve olhar entre projetos, evitando a negligência de considerar uma única demanda dentro da empresa.
+- No ambiente de computação em nuvem os recursos de base são de responsabilidade do provedor, cabendo ao cliente selecionar os recursos e capacidade apropriadas ao seu workload visando a confiabilidade.
+
+
+## Change management
+
+- Esteja ciente de como as mudanças afetam os sistemas para planejar proativamente. O monitoramento vai permitir que tendências sejam identificadas evitando problemas de capacidade ou quebra de SLAs.
+- A arquitetura do sistema deve prever mudanças automatizadas no ambiente para aumentar ou reduzir capacidade de forma automatizada (`self-heal`).
+- Controles no processo de gerenciamento de mudanças devem assegurar que o *enforcement* de regras sejam aplicados ao ambiente, garantido a confiabilidade do sistema somente de mudanças autorizadas.
+
+## Failure management
+
+- Falhas são esperadas em qualquer sistema com uma complexidade razoável. É importante ter ciência desssas falhas responder adequadamente e prevenir que ela volte a ocorrer.
+- Você deve utilizar do monitoramento e automação para reagir aos eventos de falha.
+- Backups e restore regulares deverão se efetuados para assegurar a recuperação seja no nível lógico ou físico. RTO (Recovery Time Objectives) e RPO (Recovery Point Objectives) devem estar definidos, sendo testado continuamente o processo de falhas e recuperação para garantir seu atendimento.
+  - RTO (Recovery Time Objectives) - Representa quantas horas você leva para retornar a um estado de trabalho após um desastre..
+  - RPO (Recovery Point Objectives) - Quanto tempo minha aplicação pode ficar offiline.
+
+## Serviços chave
+
+- **Amazon CloudWatch**
+- IAM
+- Trusted advisor
+- CloudTrail
+- Config
+- Shield
+- Cloud formation
+- Auto scaling
+
+
+
+
+
+
+
 
 ***
 # Referência
@@ -167,3 +219,4 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - [AWS Artifact](https://aws.amazon.com/artifact/?nc1=h_ls)
 - [AWS Shared Responsibility Model](https://wa.aws.amazon.com/wat.concept.sharedrspmodel.en.html)
 - [Overview Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/?ref=wellarchitected)
+- [Disaster recovery](https://aws.amazon.com/pt/disaster-recovery/)
