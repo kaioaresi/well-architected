@@ -204,12 +204,13 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Shield
 - Cloud formation
 - Auto scaling
-
-
-
-
-
-
+- DR (disaster recovery)
+  - S3
+  - Glacier
+- Network
+  - VPC
+- Security
+  - KMS
 
 
 ***
