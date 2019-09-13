@@ -278,15 +278,15 @@ Este pilar se concentra no uso eficiente de recursos de TI em computação.
 - O monitoramento através de métricas irá indicar por alarmes quanto o threshould foi atingido, devendo automaticamente iniciar uma ação de contorno para resolver o problema de performance dos componentes.
 - Garanta que seu monitoramento não gere muitos falso-positivos ou que sobrecarregue o sistema monitorado com geração de dados. Ações automatizadas com base em triggers ou threshoulds evitam erros humanos e podem resolver problemas mais rapidamente. Eventos de testes podem validar a efetividade do monitoramento.
 
+### Tradeoffs
 
+- Quando arquitetamos uma solução precisamos pensar sobre o tradeoff da mesma, ou seja, uma decisão que afeta dois ou mais pontos distintos como a consistência em leitura/escrita de dados, durabilidade, localidade, tempo de resposta e latência para entrega com a melhor performance.
+- Utilizando computação em nuvem você pode torna-se global em minutos, dispondo seus serviços aos usuários com alta performance e disponibilidade. Sejam nos níveis de web, app ou banco de dados.
+- Realizar um tradeoff consistent em uma arquitetura complexa pode requerer testes para garantir que os benefícios pretendidos sejam realmente obtidos.
 
+## Serviços chaves
 
-
-
-
-
-
-
+- CloudWatch
 
 ***
 # Referência
