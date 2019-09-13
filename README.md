@@ -212,6 +212,81 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - Security
   - KMS
 
+---
+
+# Eficiência de performance
+
+Este pilar se concentra no uso eficiente de recursos de TI em computação.
+
+## Design principles
+
+- Democratize advanced tecnologies (Democratizar tecnologias avançadas)
+- Go global in minute (Torne-se global em minutos)
+- Use serveless architecture (utilize arquitetura de computação sem servidores)
+- Experiment more often (Experimente com mais frequência)
+- Mechanical sympathy (simpatia mecânica)
+
+## Melhores praticas
+
+### Selection
+
+- A melhor solução para um sistema em particular irá variar baseado no tipo de workload, frequentemente com múltiplas soluções combinadas.
+- Um sistema bem arquitetado pode utilizar múltiplas soluções para habilitar diferentes features e aumentar a performance.
+- Através das opções de serviços da nuvem podem ser escolhidos aqueles que melhor atendem o workload, diferente das restrições on-premises onde fazemos a seleção muitas vezes baseado em investimentos anteriores.
+
+### Compute
+
+- A escolha de uma solução de compute pode variar de acordo com o design da aplicação, padrão de uso e configuração requeridas. A arquitetura pode utilizar diferentes soluções de computação para vários componentes habilitando features para aumentar a performance.
+- A solução de computação errada de irá levar a aplicação a uma baixa eficiência de performance.
+  - EC2
+  - ECS
+  - Lambda
+
+### Storage
+
+- A solução mais otimizada de storage irá variar conforme o sistema em particular e método de acesso requerido (bloco, arquivo,objeto), padrões de acesso (randomico ou seguencial), throughput, freguência de acesso (online, offine, archival), freguência de update (WORM, dunamic) e características de disponibilidade e durabilidade dos dados.
+- Na AWS você irá encontrar soluções de storage virtualizada para atender uma grande gama de workloads. Utilizando o S3 (object storage), EBS (HDD ou SSD), EFS (Elastic file system), entre outros, os quais podem ser facilmente criados, expandidos, clonados e desprovisionados conforme a demanda.
+
+### Database
+
+- A solução mais otimizaa de banco de dados irá variar conforme o requerimento de disponibilidade, consistência, tolerância de partição, latência, durabilidade, escalabilidade e tipo de consulta (query).
+- Muitos sistemas usam diferentes tipos de banco de dados para atender variados cenários de performance.
+- Na AWS você irá encontrar soluções de banco de dados para atender todos os tipos de workload.
+  - Amazon RDS como um banco de dados gerenciado para SQL.
+  - DynamoDB para NoSQL com alta performance, escalabilidade e baixa latência.
+  - Amazon Redshift para data warehouse na ordem de petabytes.
+  - Amazon Neptune para Graph.
+  - Amazon Timestream para séries temporais.
+  - Elasticache como BD em memória, entre outros.
+
+![Databases](https://d1.awsstatic.com/AWS%20Databases/Use%20Cases/isa.aaf804f08b600074fbe7a9dc7b3800fecf1df57e.png)
+
+### Network
+
+- A solução mais otimizada de rede irá variar conforme o sistema em particular baseado em requisitos de latência e throughput. Restrições físicas de rede são removidas se comparadas ao mundo on-premises.
+- Técnicas de distribuição de conteúdo próximo ao usuário (edge techniques) ou placement group o qual especifica como as máquinas virtuais serão dispostas em hardware adjacente ou não.
+- A AWS oferece features como Enhanced networking, Amazon EBS-otimized instances, Amazon S3 tranfer acceleration, Amazon CloudFront, Amazon route 53 latency routing, Amazon VPC endpoints e AWS directs connect para entrega de rede otimizada seja internamente na AWS, na conexão como o  Datacenter on-premises ou serviços pela internet aos usuários.
+
+### Review
+
+- Quando realizamos a arquitetura de soluções temos algumas opções a escolher, entretanto, ao longo do tempo novas tecnologias são lançadas e outras formas de atender o workload podem estar disponíveis as quais podem melhorar a eficiência de performance da sua arqutetura.
+- Entede onde a arquitetura tem restrições de performance também pode ajudar a focar a análise e dimensionar novas soluções que podem melhor atender o workload.
+
+### Monitoring
+
+- Depois de implementar sua arquitetura você deve monitorar sua performance constantemente para remediar problemas antes de impactar seus clientes.
+- O monitoramento através de métricas irá indicar por alarmes quanto o threshould foi atingido, devendo automaticamente iniciar uma ação de contorno para resolver o problema de performance dos componentes.
+- Garanta que seu monitoramento não gere muitos falso-positivos ou que sobrecarregue o sistema monitorado com geração de dados. Ações automatizadas com base em triggers ou threshoulds evitam erros humanos e podem resolver problemas mais rapidamente. Eventos de testes podem validar a efetividade do monitoramento.
+
+
+
+
+
+
+
+
+
+
 
 ***
 # Referência
@@ -221,3 +296,4 @@ Alguns serviços da aws para lhe auxiliar na execelência operacional
 - [AWS Shared Responsibility Model](https://wa.aws.amazon.com/wat.concept.sharedrspmodel.en.html)
 - [Overview Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/?ref=wellarchitected)
 - [Disaster recovery](https://aws.amazon.com/pt/disaster-recovery/)
+- [Databases](https://aws.amazon.com/pt/products/databases/)
