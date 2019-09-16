@@ -287,6 +287,56 @@ Este pilar se concentra no uso eficiente de recursos de TI em computação.
 ## Serviços chaves
 
 - CloudWatch
+---
+# Cost optimization
+
+O pilar de otimização de custos inclui a habilidade de executar sistemas para **entregar valor ao negócio através do menor preço dispónivel**.
+
+## Design principles
+
+- Adopt a consumption model (adote um modelo de consumo)
+- Measure overall efficiency (avalie a eficiência global)
+- Stop spending money on data center operations (Para de gastar dinehiro com operações de data center)
+- Analyze and attribute expenditure (Analize e atribua as dispesas)
+- Use managed and application level services to reduce cost of ownership (User serviços gerenciados e de nível de aplicação para reduzir o custo total de propriedade)
+
+# Melhores praticas
+
+## Expenditure awsreness (gastar com conciência)
+
+- Em cloud computing as restrições de hardware são removidas, podendo ser provisionado um número virtualmente ilimitado de recursos.
+- Todo o time deve ser treinado sobre o uso de recursos de forma consciente visando evitar gastos desnecessários.
+- Custos devem ser associados a departamentos, projetos, sistemas e áreas de negócio.
+- O usuo de TAGs é essencial para controle dos gastos, sendo acompanhado através do *Cost Explorer*.
+- A AWS bugdets pode ser utilizado para controlar os custos dos serviços atuais e previsão futura.
+
+## Cost-Effective resources
+
+- Utilização dos recursos apropriados (instâncias, bando de dados, armazenamento, etc) é um ponto chave para economia.
+- Serviços gerenciados podem reduzir os custos da conta, por exemplo, para e-mails e SMS.
+- Instâncias (`on-demand` / `reserved` / `spot`).
+- `CloudFront` para minimizar os custos de conteúdo web.
+- Amazon aurora para reduzir os custos de licenciamento.
+
+## Matching supply and demand
+
+- A otimização de custos inclui a execução do workload gastando o mínimo possível, mas, capacidade extra para entender demandas sazonais ou de queda de componentes individuais devem ser consideradas.
+- Na AWS você pode provisionar automaticamente recursos (auto-scaling, IOPs, buffer, etc). Quando melhor sua antecipação a essas demandas, menos você irá gastar para assegurar os recursos e atender a demanda do workload.
+- Quando realizar o planejamento para atender demandas sazonais pense do padrão de uso, tempo de execução e tipo de recurso que será provisionado.
+
+## Optimizing over time
+
+- A AWS lança continuamente novas features e serviços, você deve rever sua arquitetura para assegurar que continua com o melhor custo-benefícios.
+- Conforme seu requisito de negócio se altera seja efetivo também no desprovisinamento de recursos, serviços e sistemas não mais requeridos.
+
+
+## Serviços chaves
+
+- A ferramenta de `Cost Explorer` irá ajudar a ganhar visibilidade e insights sobre a utilização através de todos os workloads da organização.
+
+
+
+
 
 ***
 # Referência
